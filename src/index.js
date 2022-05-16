@@ -8,11 +8,9 @@ import Gameboard from './gameboard';
 // console.log(Ship(1).damage);
 // Ship(2).hit()
 
-// const idk = Ship(2);
-// console.log(idk.damage);
-// idk.hit(0);
-// console.log(idk.damage);
-// idk.hit(1);
-// console.log(idk.damage);
-// idk.hit();
-// console.log(idk.damage);
+// ship names:
+// carrier (5)
+// battleship (4)
+// cruiser (3)
+// submarine (3)
+// destroyer (2)
