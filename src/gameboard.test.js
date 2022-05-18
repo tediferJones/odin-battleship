@@ -33,7 +33,7 @@ test('recieveAttack: miss', () => {
 test('recieveAttack: hit', () => {
   const x = Gameboard();
   x.placeShip(0, 0, 'horizontal', Ship(2, 'boat'));
-  expect(x.receiveAttack(0, 0)).toBe(true);
+  expect(x.receiveAttack(0, 0)).toStrictEqual(['boat', '0']);
   expect(x.enemyGuesses[0][0]).toBe(true);
   expect(x.myBoard[0][0]).toBe(false);
 });

@@ -1,3 +1,32 @@
-div {
-    color: red
+.allBoards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 48px;
+}
+
+.rows {
+    display: flex;
+}
+
+.cell {
+    height: 24px;
+    width: 24px;
+    border-style: solid;
+}
+
+.empty {
+    background-color: aqua;
+}
+
+.ship {
+    background-color: grey;
+}
+
+.hit {
+    background-color: red;
+}
+
+.goodGuess {
+    background-color: green;
 }

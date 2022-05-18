@@ -13,6 +13,7 @@
     "rules": {
         "no-console": "off",
         "no-undef": "off",
-        "no-restricted-syntax": "off"
+        "no-restricted-syntax": "off",
+        "guard-for-in": "off"
     }
 }
