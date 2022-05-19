@@ -14,6 +14,7 @@
         "no-console": "off",
         "no-undef": "off",
         "no-restricted-syntax": "off",
-        "guard-for-in": "off"
+        "guard-for-in": "off",
+        "no-param-reassign": "off"
     }
 }

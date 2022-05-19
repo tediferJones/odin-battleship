@@ -1,5 +1,3 @@
-// const Ship = require('./ship');
-
 const Gameboard = () => {
   const board = [
     [null, null, null, null, null, null, null, null, null, null],
@@ -30,10 +28,9 @@ const Gameboard = () => {
     enemyGuesses: myOtherBoardCuzJS,
     myShips: {},
     placeShip(row, col, direction, ship) {
-      // add ship to myShips here
       this.myShips[`${ship.name}`] = ship;
       // NEED TO ADD SANITIZATION, make sure all spots are null before placing
-      // otherwise ships can overlap which will break the game
+      // otherwise ships can overlap
 
       let count = 0;
       if (direction === 'horizontal') {
@@ -55,7 +52,6 @@ const Gameboard = () => {
     receiveAttack(row, col) {
       let isHit;
       if (this.myBoard[row][col] !== null && this.myBoard[row][col] !== false) {
-        // console.log('HIT')
         const value = this.myBoard[row][col];
         const location = value[0];
         const name = value.slice(1);
@@ -63,10 +59,7 @@ const Gameboard = () => {
 
         this.enemyGuesses[row][col] = true;
         this.myBoard[row][col] = false;
-        // just return a true or false value for the coordinates,
-        // other functinos in index.js will handle hit() and marking the appropiate board
 
-        // the above is kind of a lie, call correct ship from myShips, and hit it
         isHit = [name, location];
       } else {
         this.enemyGuesses[row][col] = false;
